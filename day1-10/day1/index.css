@@ -1,0 +1,38 @@
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box1 {
+  width: 500px;
+  height: 100px;
+  background: linear-gradient(red, orange, yellow, green, 
+                              blue, indigo, purple);
+}
+.box2 {
+  width: 500px;
+  height: 100px;
+  background: linear-gradient(
+                              red 10%, red 15%, 
+                              orange 15%, orange 30%, 
+                              yellow 30%, yellow 45%, 
+                              green 45%, green 60%, 
+                              blue 60%, blue 75%, 
+                              indigo 75%, indigo 90%, 
+                              purple 90%, purple 100%
+                              );
+}
+.box3 {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, red 0%, red 15%, 
+                                     orange 15%, orange 30%,
+                                     yellow 30%, yellow 45%,
+                                     green 45%, green 60%,
+                                     blue 60%, blue 75%,
+                                     indigo 75%, indigo 90%,
+                                     purple 90%, purple 100%);
+}
