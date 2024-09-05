@@ -1,38 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-.box1 {
-  width: 500px;
-  height: 100px;
-  background: linear-gradient(red, orange, yellow, green, 
-                              blue, indigo, purple);
-}
-.box2 {
-  width: 500px;
-  height: 100px;
-  background: linear-gradient(
-                              red 10%, red 15%, 
-                              orange 15%, orange 30%, 
-                              yellow 30%, yellow 45%, 
-                              green 45%, green 60%, 
-                              blue 60%, blue 75%, 
-                              indigo 75%, indigo 90%, 
-                              purple 90%, purple 100%
-                              );
-}
-.box3 {
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, red 0%, red 15%, 
-                                     orange 15%, orange 30%,
-                                     yellow 30%, yellow 45%,
-                                     green 45%, green 60%,
-                                     blue 60%, blue 75%,
-                                     indigo 75%, indigo 90%,
-                                     purple 90%, purple 100%);
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
