@@ -16,11 +16,74 @@
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(45deg, #443ca1, #4ec2c9);
 }
+
 
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.number {
+  display: flex;
+  transform: translate(15px, 5px);
+}
+.num-1-wrap {
+  position: relative;
+}
+.num-1 {
+  position: absolute;
+  width: 25px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: #00000067 0 0 10px;
+  z-index: 100;
+}
+.num-1-1 {
+  position: absolute;
+  top: 0px;
+  left: -16px;
+  z-index: 1;
+  width: 25px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: #00000067 0 0 10px;
+  transform: rotate(45deg);
+
+}
+.num-0-1 {
+  width: 65px;
+  height: 65px;
+  border: 25px solid #fff;
+  border-radius: 50%;
+  box-shadow: #00000067 0 0 10px;
+  transform: translate(18px, 2px);
+  z-index: 1;
+}
+.num-0-2 {
+  width: 65px;
+  height: 65px;
+  border: 25px solid #fff;
+  border-radius: 50%;
+  box-shadow: #00000067 0 0 10px;
+  transform: translate(9px, 2px);
+}
+
+.text-95 {
+  font-size: 95px;
+}
+.text-35 {
+  font-size: 35px;
+}
+.text-light {
+  color: #fff;
+}
+.fw-900 {
+  font-weight: 900;
 }
