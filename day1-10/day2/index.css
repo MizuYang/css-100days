@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  background-color: #3faf82;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.menu-wrapper {
+  width: 80px;
+  cursor: pointer;
+  padding: 20px 25px;
+
+  .line-1 {
+    animation: line-cross-1-pre .7s ease-in-out;
+  }
+  .line-2 {
+    animation: line-cross-2-pre .7s ease-in-out;
+  }
+  .line-3 {
+    animation: line-cross-3-pre .7s ease-in-out;
+  }
+}
+.menu-wrapper:hover div {
+  background-color: #f3f3f3;
+}
+.menu-wrapper.active {
+  .line-1 {
+    animation: line-cross-1 .7s ease forwards;
+  }
+  .line-2 {
+    animation: line-cross-2 .7s ease forwards;
+  }
+  .line-3 {
+    animation: line-cross-3 .7s ease forwards;
+  }
+}
+.line-1,
+.line-2,
+.line-3 {
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: #0000005e 2px 2px 5px;
+}
+.line-1,
+.line-2 {
+  margin-bottom: 15px;
+}
+
+@keyframes line-cross-1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(23px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(23px) rotate(45deg);
+    box-shadow: #0000005e 0px 0px 10px;
+  }
+}
+@keyframes line-cross-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes line-cross-3 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-23px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-23px) rotate(-45deg);
+    box-shadow: #0000005e 0px 0px 10px;
+  }
+}
+
+@keyframes line-cross-1-pre {
+  0% {
+    transform: translateY(23px) rotate(45deg);
+    box-shadow: #0000005e 0px 0px 100px;
+  }
+  50% {
+    transform: translateY(23px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes line-cross-2-pre {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes line-cross-3-pre {
+  0% {
+    transform: translateY(-23px) rotate(-45deg);
+    box-shadow: #0000005e 0px 0px 10px;
+  }
+  50% {
+    transform: translateY(-23px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
