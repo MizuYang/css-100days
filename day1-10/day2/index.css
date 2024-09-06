@@ -141,3 +141,7 @@
     transform: translateY(0) rotate(0deg);
   }
 }
+
+.no-animatetion {
+  animation: none !important;
+}
