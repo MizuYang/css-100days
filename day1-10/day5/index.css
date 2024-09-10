@@ -30,13 +30,35 @@
   overflow: hidden;
 }
 
+.fw-bold-900 {
+  font-weight: 900;
+}
+.d-block {
+  display: block;
+}
+.text-14 {
+  font-size: 14px;
+}
+.text-align-end {
+  text-align: end;
+}
+.me-15 {
+  margin-right: 15px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
 
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1ba64;
+  padding: 15px;
+}
 .container {
   position: relative;
   height: 81px;
   width: 260px;
-  transform: translateY(70px);
 }
 
 .red polyline {
