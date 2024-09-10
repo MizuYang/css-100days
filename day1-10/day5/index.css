@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #42a7a1;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  height: 220px;
+  width: 280px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+
+
+
+
+.red {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+}
+.red polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke: #fa7373;
+}
+svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.points {
+  position: absolute;
+  color: #000;
+}
+[class^="point-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #fa7373;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+[class^="point-"] > .tooltip {
+  display: none;
+}
+[class^="point-"]:hover .tooltip {
+  display: block;
+}
+.point-1 {
+  position: absolute;
+  /* left, top 記得減掉圓點的(寬度/2), 才能置中 */
+  left: 6px;
+  top: 43px;
+}
+.point-2 {
+  position: absolute;
+  left: 47px;
+  top: 9px;
+}
+.point-3 {
+  position: absolute;
+  left: 87px;
+  top: 20px;
+}
+.point-4 {
+  position: absolute;
+  left: 127px;
+  top: 8px;
+}
+.point-5 {
+  position: absolute;
+  left: 168px;
+  top: 35px;
+}
+.point-6 {
+  position: absolute;
+  left: 208px;
+  top: 45px;
+}
+.point-7 {
+  position: absolute;
+  left: 248px;
+  top: 16px;
+}
+.tooltip {
+  position: absolute;
+  color: #fff;
+  background-color: #fa7373;
+  border-radius: 3px;
+  padding: 10px 10px;
+  transform: translate(-20px, -41px);
+}
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  z-index: 100;
+  width: 6px;
+  height: 6px;
+  display: block;
+  background: linear-gradient(45deg, #fa7373 70%, transparent 50%);
+  transform: translateX(15px) translateY(33px) rotate3d(0, 0, 1, -45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
