@@ -204,6 +204,19 @@ svg {
   transform: translateX(15px) translateY(33px) rotate3d(0, 0, 1, -45deg);
 }
 
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.day {
+  font-size: 14px;
+  color: #aaaaaa;
+  text-align: center;
+  flex-grow: 1;
+  text-transform: uppercase;
+}
+
 @keyframes dash {
 	to {
 		stroke-dashoffset: 0;
