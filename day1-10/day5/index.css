@@ -250,6 +250,33 @@ svg {
   transform: translateY(-50%);
   background-color: #dedddd;
 }
+.line-1::before {
+  content: '1000';
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  color: #aaaaaa;
+  font-size: 13px;
+  display: block;
+}
+.line-2::before {
+  content: '500';
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  color: #aaaaaa;
+  font-size: 13px;
+  display: block;
+}
+.line-3::before {
+  content: '0';
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  color: #aaaaaa;
+  font-size: 13px;
+  display: block;
+}
 
 @keyframes dash {
 	to {
