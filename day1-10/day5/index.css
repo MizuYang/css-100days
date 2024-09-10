@@ -44,6 +44,10 @@
   stroke-width: 2;
   stroke-linecap: round;
   stroke: #fa7373;
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 4s linear forwards;
 }
 svg {
   position: absolute;
@@ -130,7 +134,11 @@ svg {
   transform: translateX(15px) translateY(33px) rotate3d(0, 0, 1, -45deg);
 }
 
-
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
 
 
 
