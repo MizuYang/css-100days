@@ -32,18 +32,28 @@
 
 
 
-
-
-.red {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-25%);
+.container {
+  position: relative;
+  height: 81px;
+  width: 260px;
+  transform: translateY(70px);
 }
+
 .red polyline {
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
   stroke: #fa7373;
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 4s linear forwards;
+}
+.blue polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke: #42daeb;
 
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -66,54 +76,40 @@ svg {
   left: 0;
   width: 6px;
   height: 6px;
-  background: #fa7373;
   border-radius: 3px;
   cursor: pointer;
   z-index: 10;
 }
-[class^="point-"] > .tooltip {
+.red .points [class^="point-"] {
+  background: #fa7373;
+}
+.blue .points [class^="point-"] {
+  background: #73d1fa;
+}
+.red .tooltip,
+.blue .tooltip {
   display: none;
 }
-[class^="point-"]:hover .tooltip {
+.red [class^="point-"]:hover .tooltip,
+.blue [class^="point-"]:hover .tooltip {
   display: block;
 }
-.point-1 {
-  position: absolute;
-  /* left, top 記得減掉圓點的(寬度/2), 才能置中 */
-  left: 6px;
-  top: 43px;
-}
-.point-2 {
-  position: absolute;
-  left: 47px;
-  top: 9px;
-}
-.point-3 {
-  position: absolute;
-  left: 87px;
-  top: 20px;
-}
-.point-4 {
-  position: absolute;
-  left: 127px;
-  top: 8px;
-}
-.point-5 {
-  position: absolute;
-  left: 168px;
-  top: 35px;
-}
-.point-6 {
-  position: absolute;
-  left: 208px;
-  top: 45px;
-}
-.point-7 {
-  position: absolute;
-  left: 248px;
-  top: 16px;
-}
-.tooltip {
+.red .point-1 { left: 6px; top: 43px; }
+.red .point-2 { left: 47px; top: 9px; }
+.red .point-3 { left: 87px; top: 20px; }
+.red .point-4 { left: 127px; top: 8px; }
+.red .point-5 { left: 168px; top: 35px; }
+.red .point-6 { left: 208px; top: 45px; }
+.red .point-7 { left: 248px;top: 16px; }
+.blue .point-1 { left: 6px; top: 58px; }
+.blue .point-2 { left: 47px; top: 47px; }
+.blue .point-3 { left: 87px; top: 62px; }
+.blue .point-4 { left: 127px; top: 52px; }
+.blue .point-5 { left: 168px; top: 58px; }
+.blue .point-6 { left: 208px; top: 71px; }
+.blue .point-7 { left: 248px; top: 61px; }
+
+.red .tooltip {
   position: absolute;
   color: #fff;
   background-color: #fa7373;
@@ -121,7 +117,7 @@ svg {
   padding: 10px 10px;
   transform: translate(-20px, -41px);
 }
-.tooltip::before {
+.red .tooltip::before {
   content: '';
   position: absolute;
   top: 0;
@@ -133,26 +129,29 @@ svg {
   background: linear-gradient(45deg, #fa7373 70%, transparent 50%);
   transform: translateX(15px) translateY(33px) rotate3d(0, 0, 1, -45deg);
 }
+.blue .tooltip {
+  position: absolute;
+  color: #fff;
+  background-color: #73d1fa;
+  border-radius: 3px;
+  padding: 10px 10px;
+  transform: translate(-20px, -41px);
+}
+.blue .tooltip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  z-index: 100;
+  width: 6px;
+  height: 6px;
+  display: block;
+  background: linear-gradient(45deg, #73d1fa 70%, transparent 50%);
+  transform: translateX(15px) translateY(33px) rotate3d(0, 0, 1, -45deg);
+}
 
 @keyframes dash {
 	to {
 		stroke-dashoffset: 0;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
