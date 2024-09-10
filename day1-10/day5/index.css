@@ -55,10 +55,42 @@
   background-color: #f1ba64;
   padding: 15px;
 }
+.parameter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #aaaaaa;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+}
+.parameter .blue,
+.parameter .red {
+  display: flex;
+  align-items: center;
+}
+.parameter .blue > span {
+  display: inline-block;
+  width: 12px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #42daeb;
+  margin: 0 4px;
+}
+.parameter .red > span {
+  display: inline-block;
+  width: 12px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #fa7373;
+  margin: 0 4px;
+}
 .container {
   position: relative;
   height: 81px;
   width: 260px;
+  margin: auto;
 }
 
 .red polyline {
