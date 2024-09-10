@@ -62,7 +62,7 @@
   color: #aaaaaa;
   font-size: 14px;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-right: 15px;
 }
 .parameter .blue,
@@ -91,6 +91,7 @@
   height: 81px;
   width: 260px;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .red polyline {
@@ -119,20 +120,23 @@ svg {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 .points {
   position: absolute;
   color: #000;
+  z-index: 200;
+
 }
 [class^="point-"] {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 200;
   width: 6px;
   height: 6px;
   border-radius: 3px;
   cursor: pointer;
-  z-index: 10;
 }
 .red .points [class^="point-"] {
   background: #fa7373;
@@ -165,6 +169,7 @@ svg {
 
 .red .tooltip {
   position: absolute;
+  z-index: 200;
   color: #fff;
   background-color: #fa7373;
   border-radius: 3px;
@@ -176,7 +181,7 @@ svg {
   position: absolute;
   top: 0;
   left: 5px;
-  z-index: 100;
+  z-index: 200;
   width: 6px;
   height: 6px;
   display: block;
@@ -185,6 +190,7 @@ svg {
 }
 .blue .tooltip {
   position: absolute;
+  z-index: 200;
   color: #fff;
   background-color: #73d1fa;
   border-radius: 3px;
@@ -196,7 +202,7 @@ svg {
   position: absolute;
   top: 0;
   left: 5px;
-  z-index: 100;
+  z-index: 200;
   width: 6px;
   height: 6px;
   display: block;
@@ -215,6 +221,34 @@ svg {
   text-align: center;
   flex-grow: 1;
   text-transform: uppercase;
+}
+
+.line-1 {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+  background-color: #dedddd;
+}
+.line-2 {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+  background-color: #dedddd;
+}
+.line-3 {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+  background-color: #dedddd;
 }
 
 @keyframes dash {
