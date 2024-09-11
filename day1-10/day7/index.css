@@ -94,7 +94,22 @@
   margin: 20px 0px 0px 40px;
 }
 .notification time {
+  position: relative;
   font-size: 14px;
+}
+.notification time::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -25px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border: 2px solid #5f98cd;
+  border-radius: 50%;
+  outline: 5px solid #fff;
+
+  margin: 0px 5px;
 }
 .notification:hover {
   color: #5f98cd;
@@ -102,4 +117,13 @@
 .heightlight {
   line-height: 1.3;
   font-weight: 900;
+}
+
+.timeline {
+  position: absolute;
+  top: 58px;
+  left: 25px;
+  width: 2px;
+  height: calc(100% - 58px);
+  background-color: #EBEBEB;
 }
