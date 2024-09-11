@@ -15,6 +15,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to right, #264057, #264057);
+  overflow: hidden;
 }
 
 
@@ -25,6 +26,8 @@
   width: 170px;
   height: 270px;
   background-color: #43627d;
+  transform: translate(20px, -5px);
+  transition: all 0.5s ease;
   padding: 5px 0;
 }
 .menu li {
@@ -56,6 +59,7 @@
   height: 300px;
   background-color: #fff;
   transform: translate(-50%, -50%);
+  transition: all .8s ease;
 }
 .header {
   display: flex;
@@ -126,4 +130,11 @@
   width: 2px;
   height: calc(100% - 58px);
   background-color: #EBEBEB;
+}
+
+.container.menu-show {
+  transform: translate3d(-30px, -150px, 10px);
+}
+.menu.menu-show {
+  transform: translate3d(-10px, -5px, 0);
 }
