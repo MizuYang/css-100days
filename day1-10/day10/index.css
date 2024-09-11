@@ -49,6 +49,15 @@ svg {
 }
 
 
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: beat 1s linear infinite;
+}
+
+
 @keyframes spinner {
 	0% {
 		stroke-dashoffset: 625;
@@ -65,4 +74,13 @@ svg {
 		stroke-dashoffset: 625;
 		transform: rotate(-90deg) scaleY(-1);
 	}
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: translate(-50%,-50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%,-50%) scale(1.5);
+  }
 }
