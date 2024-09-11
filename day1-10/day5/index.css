@@ -86,6 +86,14 @@
   background-color: #fa7373;
   margin: 0 4px;
 }
+.parameter .blue.heightlight p {
+  color: rgb(148, 148, 148);
+  font-weight: 900;
+}
+.parameter .red.heightlight p {
+  color: rgb(148, 148, 148);
+  font-weight: 900;
+}
 .container {
   position: relative;
   height: 81px;
@@ -113,6 +121,14 @@
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 4s linear forwards;
+}
+.red .heightlight polyline {
+  stroke: #f9a5a5;
+  stroke-width: 4;
+}
+.blue .heightlight polyline {
+  stroke: #82dfe9;
+  stroke-width: 4;
 }
 svg {
   position: absolute;
