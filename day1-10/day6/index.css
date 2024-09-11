@@ -67,7 +67,7 @@
   border-style: solid;
   border-color: #786450 #786450 #786450 transparent;
   border-radius: 50%;
-  transition: all .7s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .circle-big {
   width: 90px;
@@ -79,15 +79,15 @@
   border-style: solid;
   border-color: #786450 transparent #786450 #786450;
   border-radius: 50%;
-  transition: all .7s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .img:hover .circle-small,
 img:hover .circle-small {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 .img:hover .circle-big,
 img:hover .circle-big {
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
 }
 .name {
   font-size: 18px;
