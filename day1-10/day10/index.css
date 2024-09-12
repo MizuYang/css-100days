@@ -9,27 +9,27 @@
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
-	overflow: hidden;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   background: #4c4c4c;
   color: #333;
-	font-family: 'Open Sans', Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .circel {
   position: relative;
   width: 200px;
   height: 200px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background-color: #242424;
   outline: 9px solid #01010144;
 }
@@ -47,40 +47,69 @@ svg {
   overflow-clip-margin: content-box;
   overflow: inherit;
 }
-
+.dotted {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px dotted #b37202;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  animation: dotted-turn 2.5s linear infinite;
+}
 
 .heart {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   animation: beat 1s linear infinite;
 }
 
-
 @keyframes spinner {
-	0% {
-		stroke-dashoffset: 625;
-		transform: rotate(-90deg) scaleY(1);
-	}
-	50% {
-		stroke-dashoffset: 0;
-		transform: rotate(-90deg) scaleY(1);
-	}
-	50.001% {
-		transform: rotate(-90deg) scaleY(-1);
-	}
-	100% {
-		stroke-dashoffset: 625;
-		transform: rotate(-90deg) scaleY(-1);
-	}
+  0% {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  100% {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
 }
 
 @keyframes beat {
-  0%, 100% {
-    transform: translate(-50%,-50%) scale(1);
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    transform: translate(-50%,-50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+@keyframes dotted-turn {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 }
