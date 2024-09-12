@@ -160,7 +160,7 @@
   cursor: pointer;
   background-color: #ec6565;
   transform: translateY(-99%);
-  transition: all .8s linear;
+  transition: transform .8s linear, background-color .3s linear;
 }
 .btn-close::before {
   content: '';
