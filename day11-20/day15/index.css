@@ -64,6 +64,7 @@
 }
 .btn-upload {
   display: block;
+  min-width: 160px;
   font-size: 15px;
   color: #fff;
   background-color: #6ece3b;
@@ -81,4 +82,12 @@
 }
 .btn-upload:hover {
   box-shadow: 0px 0px 8px #6ed636;
+}
+.btn-upload.is-invalid {
+  background-color: #f78181;
+  border-bottom: 2px solid #fe4646;
+
+}
+.btn-upload.is-invalid:hover {
+  box-shadow: 0px 0px 8px #f78181;
 }
