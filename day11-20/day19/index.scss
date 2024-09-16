@@ -65,3 +65,28 @@ label[for^="dot"] {
 #dot3:checked ~ .dotted {
 	transform: translate(350%, -50%);
 }
+
+/*
+	背景做法就是設定 border-left, border-right 和自身背景色皆為400px寬度
+ 	然後透過 transform: translateX() 來移動背景(判斷 :checked 狀態)
+*/
+.bg {
+	position: absolute;
+	z-index: -1;
+	width: 400px;
+	height: 100vh;
+	background-color: #9b59b6;
+	border-right: 400px solid #3498db;
+	border-left: 400px solid #1abc9c;
+	transform: translateX(-400px);
+	transition: all .5s linear;
+}
+#dot1:checked ~ .bg {
+	transform: translateX(-400px);
+}
+#dot2:checked ~ .bg {
+	transform: translateX(0);
+}
+#dot3:checked ~ .bg {
+	transform: translateX(400px);
+}
