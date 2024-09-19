@@ -31,7 +31,7 @@
 	left: 50%;
 	font-size: 30px;
 	transform: translate(-50%, -50%);
-	animation: top-text .7s ease-out;
+	animation: text-top .7s ease-out;
 	opacity: 1;
 }
 .text-bottom {
@@ -39,7 +39,7 @@
 	left: 50%;
 	font-size: 30px;
 	transform: translate(-50%, -50%);
-	animation: bottom-text .7s ease-out;
+	animation: text-bottom .7s ease-out;
 	opacity: 1;
 }
 .text-middle {
@@ -48,11 +48,11 @@
 	font-size: 50px;
 	font-weight: 900;
 	transform: translate(-50%, -50%) scale(1);
-	animation: middle-text .5s ease-out;
+	animation: text-middle .5s ease-out;
 	opacity: 1;
 }
 
-@keyframes top-text {
+@keyframes text-top {
 	0% {
 		opacity: 0;
 		transform: translate(-65%, -50%);
@@ -62,7 +62,7 @@
 		transform: translate(-50%, -50%);
 	}
 }
-@keyframes bottom-text {
+@keyframes text-bottom {
 	0% {
 		opacity: 0;
 		transform: translate(-35%, -50%);
@@ -72,7 +72,7 @@
 		transform: translate(-50%, -50%);
 	}
 }
-@keyframes middle-text {
+@keyframes text-middle {
 	0% {
 		opacity: 0;
 		transform: translate(-50%, -50%) scale(0);
@@ -80,5 +80,45 @@
 	100% {
 		opacity: 1;
 		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+
+
+.line-left {
+	width: 6px;
+	height: 130px;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	background-color: #fff;
+	transform: translateY(-50%) scaleY(1);
+	animation: line-left .5s ease-out;
+}
+.line-right {
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	width: 6px;
+	height: 130px;
+	background-color: #fff;
+	transform: translateY(-50%) scaleY(1);
+	animation: line-right .5s ease-out;
+}
+
+@keyframes line-left {
+	0% {
+	transform: translateY(-50%) scaleY(0);
+	}
+	100% {
+	transform: translateY(-50%) scaleY(1);
+	}
+}
+@keyframes line-right {
+	0% {
+	transform: translateY(-50%) scaleY(0);
+	}
+	100% {
+	transform: translateY(-50%) scaleY(1);
 	}
 }
