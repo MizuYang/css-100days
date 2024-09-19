@@ -182,3 +182,33 @@
 		width: 40px;
 	}
 }
+
+
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	animation: circle 1s ease-in-out;
+
+	svg {
+		width: 60px;
+		height: 60px;
+	}
+	circle {
+		fill: #fff;
+	}
+}
+
+@keyframes circle {
+	0% {
+		transform: translate(-50%, -50%) scale(2);
+	}
+	20%, 
+	60% {
+		transform: translate(-50%, -50%) scale(2.5);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
