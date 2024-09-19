@@ -31,7 +31,7 @@
 	left: 50%;
 	font-size: 30px;
 	transform: translate(-50%, -50%);
-	animation: text-top .7s ease-out;
+	animation: text-top 0.7s ease-out;
 	opacity: 1;
 }
 .text-bottom {
@@ -39,7 +39,7 @@
 	left: 50%;
 	font-size: 30px;
 	transform: translate(-50%, -50%);
-	animation: text-bottom .7s ease-out;
+	animation: text-bottom 0.7s ease-out;
 	opacity: 1;
 }
 .text-middle {
@@ -48,7 +48,7 @@
 	font-size: 50px;
 	font-weight: 900;
 	transform: translate(-50%, -50%) scale(1);
-	animation: text-middle .5s ease-out;
+	animation: text-middle 0.5s ease-out;
 	opacity: 1;
 }
 
@@ -83,8 +83,6 @@
 	}
 }
 
-
-
 .line-left {
 	width: 6px;
 	height: 130px;
@@ -93,7 +91,7 @@
 	left: 50px;
 	background-color: #fff;
 	transform: translateY(-50%) scaleY(1);
-	animation: line-left .5s ease-out;
+	animation: line-left 1s ease-out;
 }
 .line-right {
 	position: absolute;
@@ -103,22 +101,84 @@
 	height: 130px;
 	background-color: #fff;
 	transform: translateY(-50%) scaleY(1);
-	animation: line-right .5s ease-out;
+	animation: line-right 1s ease-out;
 }
 
 @keyframes line-left {
 	0% {
-	transform: translateY(-50%) scaleY(0);
+		transform: translateY(-50%) scaleY(0);
 	}
 	100% {
-	transform: translateY(-50%) scaleY(1);
+		transform: translateY(-50%) scaleY(1);
 	}
 }
 @keyframes line-right {
 	0% {
-	transform: translateY(-50%) scaleY(0);
+		transform: translateY(-50%) scaleY(0);
 	}
 	100% {
-	transform: translateY(-50%) scaleY(1);
+		transform: translateY(-50%) scaleY(1);
+	}
+}
+
+.line-left::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+	transform: scaleX(1);
+	animation: line-decorate 1s ease-out 1s forwards;
+	opacity: 0;
+}
+.line-left::after {
+	content: "";
+	position: absolute;
+	top: 130px;
+	left: 0;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+	transform: scaleX(1);
+	animation: line-decorate 1s ease-out 1s forwards;
+	opacity: 0;
+}
+.line-right::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+	transform: scaleX(1);
+	animation: line-decorate 1s ease-out 1s forwards;
+	opacity: 0;
+}
+.line-right::after {
+	content: "";
+	position: absolute;
+	top: 130px;
+	right: 0;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+	animation: line-decorate 1s ease-out 1s forwards;
+	opacity: 0;
+}
+
+@keyframes line-decorate {
+	0% {
+		opacity: 0;
+		width: 0px;
+	}
+	1% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		width: 40px;
 	}
 }
