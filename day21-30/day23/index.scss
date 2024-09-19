@@ -31,25 +31,25 @@
 	left: 50%;
 	font-size: 30px;
 	transform: translate(-50%, -50%);
-	animation: text-top 0.7s ease-out;
-	opacity: 1;
+	animation: text-top 0.7s ease-out 2s forwards;
+	opacity: 0;
 }
 .text-bottom {
 	top: 60%;
 	left: 50%;
 	font-size: 30px;
 	transform: translate(-50%, -50%);
-	animation: text-bottom 0.7s ease-out;
-	opacity: 1;
+	animation: text-bottom 0.7s ease-out 2s forwards;
+	opacity: 0;
 }
 .text-middle {
 	top: 50%;
 	left: 50%;
 	font-size: 50px;
 	font-weight: 900;
-	transform: translate(-50%, -50%) scale(1);
-	animation: text-middle 0.5s ease-out;
-	opacity: 1;
+	transform: translate(-50%, -50%) scale(0);
+	animation: text-middle 0.5s ease-out 2s forwards;
+	opacity: 0;
 }
 
 @keyframes text-top {
@@ -90,8 +90,8 @@
 	top: 50%;
 	left: 50px;
 	background-color: #fff;
-	transform: translateY(-50%) scaleY(1);
-	animation: line-left 1s ease-out;
+	transform: translateY(-50%) scaleY(0);
+	animation: line-left 1s ease-out 2s forwards;
 }
 .line-right {
 	position: absolute;
@@ -100,8 +100,8 @@
 	width: 6px;
 	height: 130px;
 	background-color: #fff;
-	transform: translateY(-50%) scaleY(1);
-	animation: line-right 1s ease-out;
+	transform: translateY(-50%) scaleY(0);
+	animation: line-right 1s ease-out 2s forwards;
 }
 
 @keyframes line-left {
@@ -130,7 +130,7 @@
 	height: 6px;
 	background-color: #fff;
 	transform: scaleX(1);
-	animation: line-decorate 1s ease-out 1s forwards;
+	animation: line-decorate 1s ease-out 3s forwards;
 	opacity: 0;
 }
 .line-left::after {
@@ -142,7 +142,7 @@
 	height: 6px;
 	background-color: #fff;
 	transform: scaleX(1);
-	animation: line-decorate 1s ease-out 1s forwards;
+	animation: line-decorate 1s ease-out 3s forwards;
 	opacity: 0;
 }
 .line-right::before {
@@ -154,7 +154,7 @@
 	height: 6px;
 	background-color: #fff;
 	transform: scaleX(1);
-	animation: line-decorate 1s ease-out 1s forwards;
+	animation: line-decorate 1s ease-out 3s forwards;
 	opacity: 0;
 }
 .line-right::after {
@@ -165,7 +165,7 @@
 	width: 40px;
 	height: 6px;
 	background-color: #fff;
-	animation: line-decorate 1s ease-out 1s forwards;
+	animation: line-decorate 1s ease-out 3s forwards;
 	opacity: 0;
 }
 
