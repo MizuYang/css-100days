@@ -50,6 +50,14 @@
 	display: none;
 }
 
+
+#tab1:checked ~ .tabs .label1,
+#tab2:checked ~ .tabs .label2,
+#tab3:checked ~ .tabs .label3,
+#tab4:checked ~ .tabs .label4 {
+	background-color: #5da2ed;
+}
+
 .content1,
 .content2,
 .content3,
