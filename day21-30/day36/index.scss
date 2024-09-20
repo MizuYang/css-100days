@@ -51,6 +51,18 @@
 }
 
 
+.content1,
+.content2,
+.content3,
+.content4 {
+	background-color: #fff;
+	opacity: 0;
+	display: none;
+	text-align: center;
+	padding: 50px 10px;
+}
+
+
 #tab1:checked ~ .tabs .label1,
 #tab2:checked ~ .tabs .label2,
 #tab3:checked ~ .tabs .label3,
@@ -58,10 +70,10 @@
 	background-color: #5da2ed;
 }
 
-.content1,
-.content2,
-.content3,
-.content4 {
-	opacity: 0;
-	visibility: hidden;
+#tab1:checked ~ .main .content1,
+#tab2:checked ~ .main .content2,
+#tab3:checked ~ .main .content3,
+#tab4:checked ~ .main .content4 {
+	opacity: 1;
+	display: block;
 }
