@@ -30,6 +30,7 @@
 	display: flex;
 	align-items: center;
 	background-color: #3d4d5e;
+	user-select: none;
 
 	& label {
 		color: #fff;	
@@ -51,29 +52,35 @@
 }
 
 
+.main {
+	background-color: #fff;
+	text-align: center;
+	padding: 50px 10px;
+}
 .content1,
 .content2,
 .content3,
 .content4 {
-	background-color: #fff;
+	transform: translateY(20px);
+	transition: transform .8s ease-out,
+							opacity .8s ease-out,;
 	opacity: 0;
-	display: none;
-	text-align: center;
-	padding: 50px 10px;
+	height: 0;
+	overflow: hidden;
 }
-
 
 #tab1:checked ~ .tabs .label1,
 #tab2:checked ~ .tabs .label2,
 #tab3:checked ~ .tabs .label3,
 #tab4:checked ~ .tabs .label4 {
-	background-color: #5da2ed;
+	background-color: #6da2ed;
 }
 
 #tab1:checked ~ .main .content1,
 #tab2:checked ~ .main .content2,
 #tab3:checked ~ .main .content3,
 #tab4:checked ~ .main .content4 {
+	transform: translateY(0px);
 	opacity: 1;
-	display: block;
+	height: auto;
 }
