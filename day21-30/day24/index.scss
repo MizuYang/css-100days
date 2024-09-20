@@ -25,35 +25,97 @@
 	display: none;
 }
 .label {
-	width: 260px;
-	height: 60px;
-	display: block;
-	color: #fff;
-	font-size: 24px;
-	text-align: center;
-	line-height: 60px;
-	border: 2px solid #fff;
-	border-radius: 33px;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: all 0.6s;
-
+	& {
+		width: 260px;
+		height: 60px;
+		display: block;
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+		line-height: 60px;
+		border: 2px solid #fff;
+		border-radius: 33px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: width 0.6s,
+								border 0.1s ease .6s;
+	}
+	&::after {
+		content: "Finish";
+	}
 	&:hover {
 		background-color: #37be77;
 		box-shadow: 0 0 5px #098344;
 	}
+
+	& svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 66px;
+		height: 66px;
+		fill: #57d895;
+		stroke-width: 2px;
+		stroke: #fff;
+		transform: rotate(-90deg);
+		opacity: 0;
+
+		
+		&:hover {
+			fill: #37be77;
+		}
+
+		.progress {
+			stroke: #fff;
+			stroke-dasharray: 365;
+		}
+		.bg {
+			fill: none;
+			stroke-width: 2px;
+			stroke: #45b0772b;
+		}
+	}
 }
+#checkbox:checked {
+	+ .label {
+		& {
+			width: 60px;
+			border: 2px solid transparent;
+			cursor: default
+		}
+		&:hover {
+			background-color: transparent;
+			box-shadow: none;
+			fill: #57d895;
+		}
+		& svg {
+			fill: #57d895;
+			cursor: pointer;
+			animation: progress 1.4s linear .6s forwards;
+		}
+	}
+	& + .label::after {
+		content: "";
+	}
+}
+
+@keyframes progress {
+	0% {
+		opacity: 1;
+		stroke-dashoffset: 365;
+	}
+	100% {
+		opacity: 1;
+		stroke-dashoffset: 0;
+	}
+}
+
 .container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
-
-
-
-
 
 
 
