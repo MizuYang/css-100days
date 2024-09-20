@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
 
+:root {
+	--speed: 3s;
+}
+
 .frame {
 	position: absolute;
 	top: 50%;
@@ -39,7 +43,7 @@
 	border-radius: 50%;
 	background-color: #888888a4;
 	transform: translateX(-50%);
-	animation: shadow 3s linear infinite;
+	animation: shadow var(--speed) linear infinite;
 }
 @keyframes shadow {
 	0%, 100% {
@@ -57,7 +61,7 @@
 	top: 30%;
 	left: 44%;
 	transform: rotate(-45deg) scale(3);
-	animation: pointer 3s linear infinite;
+	animation: pointer var(--speed) linear infinite;
 }
 @keyframes pointer {
 	0%, 100% {
