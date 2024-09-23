@@ -41,6 +41,7 @@
 		color: #fff;
 		text-decoration: none;
 		margin: 10px;
+		opacity: 0;
 		animation: fadeOut 1.5s linear forwards;
 		&:hover {
 			color: #b4bec8;
@@ -117,4 +118,10 @@
 	100% {
 		opacity: 0;
 	}
+}
+
+
+.animation-none,
+.animation-none a {
+	animation: none;
 }
