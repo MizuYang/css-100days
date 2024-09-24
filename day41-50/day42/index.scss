@@ -15,14 +15,28 @@
 	}
 }
 
-.start-1 {
-	top: 100px;
-	left: 100px;
-	width: 1px;
-	height: 1px;
-	background-color: #fff;
-	border-radius: 1px;
-	animation: shine 1.5s ease infinite;
+// .start-1 {
+// 	top: 100px;
+// 	left: 100px;
+// 	width: 1px;
+// 	height: 1px;
+// 	background-color: #fff;
+// 	border-radius: 1px;
+// 	animation: shine 1.5s ease infinite;
+// }
+
+@for $i from 1 through 300 {
+	.start-#{$i} {
+		top: random(300) + px;
+		left: random(300) + px;
+		width: 1px;
+		height: 1px;
+		background-color: #fff;
+		border-radius: 1px;
+		// 產生0-4的隨機數給 => 動畫持續時間、延遲時間
+		animation: shine random(40) / 10 + 0.1 + s ease random(40) / 10 + 0.1 + s infinite;
+		// animation: shine 1.5s ease 1.5s infinite;
+	}
 }
 
 
