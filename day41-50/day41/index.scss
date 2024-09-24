@@ -31,6 +31,10 @@
 	box-shadow: 0 0 15px #0000008b;
 	transform: translate(-50%, -50%) scale(0);
 	animation: big .7s linear forwards;
+	
+	&.hide {
+		animation: small .7s linear forwards;
+	}
 }
 .card-header {
 	color: #7c7c7c;
@@ -54,7 +58,7 @@
 		padding: 10px 0;
 		
 		&:hover {
-			background-color: #f65656;
+			background-color: #f74747;
 		}
 	}
 }
@@ -69,5 +73,16 @@
 	}
 	100% {
 		transform: translate(-50%, -50%) scale(1);
+	}
+}
+@keyframes small {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	80% {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
 	}
 }
