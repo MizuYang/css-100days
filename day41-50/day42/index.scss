@@ -9,8 +9,19 @@
 	border-radius: 50%;
 	background: linear-gradient(to top, #6ab4c3 2%, #1e4354 80%);
 	transform: translate(-50%, -50%);
+
+	& * {
+		position: absolute;
+	}
 }
 
-
+.start-1 {
+	top: 100px;
+	left: 100px;
+	width: 1px;
+	height: 1px;
+	background-color: #fff;
+	border-radius: 1px;
+}
 
 
