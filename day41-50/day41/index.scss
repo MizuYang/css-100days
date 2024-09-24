@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	background: linear-gradient(45deg, #abd5ff, #ffabab);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28404e', endColorstr='#1c2e38',GradientType=0 );
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-transform: uppercase;
+}
+
+
+
+
+.card {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	text-align: center;
+	box-shadow: 0 0 15px #0000008b;
+	transform: translate(-50%, -50%);
+}
+.card-header {
+	color: #7c7c7c;
+	background-color: #fff;
+	border-bottom: 1px solid #777;
+	padding: 10px;
+}
+.card-body {
+	background-color: #fff;
+	padding: 25px;
+}
+.card-footer {
+	background-color: rgb(226, 224, 224);
+
+	.btn-close {
+		display: block;
+		width: 100%;
+		color: #fff;
+		background-color: #f65656;
+		text-decoration: none;
+		padding: 10px 0;
+		
+		&:hover {
+			background-color: #f65656;
+		}
+	}
+}
+
+
